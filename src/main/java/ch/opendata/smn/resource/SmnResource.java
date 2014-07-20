@@ -5,8 +5,6 @@ import ch.opendata.smn.core.GeoAdmin;
 import com.codahale.metrics.annotation.Timed;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
-import com.wordnik.swagger.annotations.ApiResponse;
-import com.wordnik.swagger.annotations.ApiResponses;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,8 +15,8 @@ import java.io.IOException;
 import java.util.Collection;
 
 @Path("/smn")
-@Api(value = "/smn", description = "Operations about SwissMetNet SMN")
-@Produces(MediaType.APPLICATION_JSON)
+@Api(value = "smn", description = "Methods to retrieve SwissMetNet data.")
+@Produces(MediaType.APPLICATION_JSON + "; charset=UTF-8")
 public class SmnResource {
   private final GeoAdmin geoAdmin;
 
@@ -28,11 +26,8 @@ public class SmnResource {
 
   @GET
   @Timed
-  @ApiOperation(value = "Find pet by ID", notes = "More notes about this method", response = Collection.class)
-  @ApiResponses(value = {
-    @ApiResponse(code = 400, message = "Invalid ID supplied"),
-    @ApiResponse(code = 404, message = "Pet not found")
-  })
+  @ApiOperation(value = "Get all data from all SMN stations", notes = "Data is cache with a short TTL",
+    response = SmnRecord.class, responseContainer = "List")
   public Collection<SmnRecord> list() throws IOException {
     return geoAdmin.getSmnData().getAllRecords();
   }
@@ -40,6 +35,8 @@ public class SmnResource {
   @GET
   @Timed
   @Path("/{code}")
+  @ApiOperation(value = "Get data for a single SMN station", notes = "The 'code' parameter is expected to be "
+    + "upper-case. Data is cache with a short TTL", response = SmnRecord.class)
   public SmnRecord getSmnRecord(@PathParam("code") String code) throws IOException {
     return geoAdmin.getSmnData().getRecordFor(code);
   }
