@@ -16,6 +16,7 @@ import java.util.List;
  */
 @Getter
 public class SmnRecord {
+  @Getter(AccessLevel.NONE)
   private final Logger logger = LoggerFactory.getLogger(SmnRecord.class);
 
   @Getter(AccessLevel.NONE)
