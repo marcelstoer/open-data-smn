@@ -6,15 +6,6 @@ import ch.opendata.smn.resource.RootResource;
 import ch.opendata.smn.resource.SmnResource;
 import com.federecio.dropwizard.swagger.SwaggerDropwizard;
 import com.googlecode.webutilities.filters.ResponseCacheFilter;
-import com.wordnik.swagger.config.ConfigFactory;
-import com.wordnik.swagger.config.ScannerFactory;
-import com.wordnik.swagger.config.SwaggerConfig;
-import com.wordnik.swagger.jaxrs.config.DefaultJaxrsScanner;
-import com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider;
-import com.wordnik.swagger.jaxrs.listing.ApiListingResourceJSON;
-import com.wordnik.swagger.jaxrs.listing.ResourceListingProvider;
-import com.wordnik.swagger.jaxrs.reader.DefaultJaxrsApiReader;
-import com.wordnik.swagger.reader.ClassReaders;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -51,10 +42,10 @@ public class OpenDataSmn extends Application<OpenDataSmnConfiguration> {
 
   @Override
   public void run(OpenDataSmnConfiguration configuration, Environment environment) {
-    environment.jersey().register(new RootResource());
-    configureSmn(configuration, environment);
     configureSwagger(configuration, environment);
     registerCrossOriginFilter(environment);
+    environment.jersey().register(new RootResource());
+    configureSmn(configuration, environment);
   }
 
   private void configureSwagger(OpenDataSmnConfiguration configuration, Environment environment) {
@@ -79,12 +70,12 @@ public class OpenDataSmn extends Application<OpenDataSmnConfiguration> {
       new ResponseCacheFilter());
     responseCacheFilter.setInitParameter("reloadTime", String.valueOf(
       configuration.getResponseCacheTimeToLiveMinutes() * 60));
-    responseCacheFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn*");
+    responseCacheFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn/*");
   }
 
   private void registerCrossOriginFilter(Environment environment) {
     FilterRegistration.Dynamic crossOriginFilter = environment.servlets().addFilter("crossOriginFilter",
       new CrossOriginFilter());
-    crossOriginFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn*");
+    crossOriginFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn/*");
   }
 }
