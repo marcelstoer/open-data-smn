@@ -9,11 +9,3 @@ server:
   connector:
     type: http
     port: 4711
-  requestLog:
-    appenders: []
-logging:
-  level: INFO
-  appenders:
-    - type: file
-      currentLogFilename: /wwwprod/smn/logs/open-data-smn.log
-      archivedLogFilenamePattern: /wwwprod/smn/logs/open-data-smn-%d.log.gz
