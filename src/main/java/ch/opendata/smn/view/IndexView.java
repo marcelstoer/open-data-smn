@@ -4,11 +4,10 @@ import io.dropwizard.views.View;
 
 public class IndexView extends View {
   public IndexView() {
-    super("index.mustache");
-//    super("index.ftl");
+    super("index.ftl");
   }
 
   public String getTitle() {
-    return "OpenData.ch | SwissMetNet SMN";
+    return "OpenData SMN - SwissMetNet SMN for OpenData.ch";
   }
 }

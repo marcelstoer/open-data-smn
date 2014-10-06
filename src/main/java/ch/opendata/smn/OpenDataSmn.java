@@ -4,7 +4,7 @@ import ch.opendata.smn.core.GeoAdmin;
 import ch.opendata.smn.health.SmnHealthCheck;
 import ch.opendata.smn.resource.RootResource;
 import ch.opendata.smn.resource.SmnResource;
-import com.federecio.dropwizard.swagger.SwaggerDropwizard;
+import io.federecio.dropwizard.swagger.SwaggerDropwizard;
 import com.googlecode.webutilities.filters.ResponseCacheFilter;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;

@@ -1,6 +1,7 @@
 package ch.opendata.smn.api;
 
 import com.google.common.base.Splitter;
+import com.wordnik.swagger.annotations.ApiModel;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.Map;
 /**
  * Represents the entire data set for a point in time.
  */
+@ApiModel(value = "A container for SMN data records")
 public class SmnData {
   private final Map<String, SmnRecord> smnRecords;
 
