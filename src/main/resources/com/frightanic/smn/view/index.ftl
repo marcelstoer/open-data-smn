@@ -20,7 +20,7 @@
     }
 
     body {
-      font: normal .80em 'trebuchet ms', arial, sans-serif;
+      font: normal 1em 'trebuchet ms', arial, sans-serif;
       background: #FFF repeat;
       color: #000;
     }
