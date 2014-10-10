@@ -1,5 +1,4 @@
-data.url: http://data.geo.admin.ch.s3.amazonaws.com/ch.meteoschweiz.swissmetnet/data.zip
-data.fileName: VQHA69.txt
+data.url: http://data.geo.admin.ch.s3.amazonaws.com/ch.meteoschweiz.swissmetnet/VQHA69.txt
 data.cacheTimeToLiveMinutes: 5
 responseCacheTimeToLiveMinutes: 1
 server:
