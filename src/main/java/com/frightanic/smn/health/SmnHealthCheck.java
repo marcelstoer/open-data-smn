@@ -3,6 +3,8 @@ package com.frightanic.smn.health;
 import com.frightanic.smn.core.GeoAdmin;
 import com.codahale.metrics.health.HealthCheck;
 
+import java.io.IOException;
+
 public class SmnHealthCheck extends HealthCheck {
   private final GeoAdmin geoAdmin;
 
@@ -11,7 +13,7 @@ public class SmnHealthCheck extends HealthCheck {
   }
 
   @Override
-  protected Result check() throws Exception {
+  protected Result check() throws IOException {
     if (geoAdmin.getSmnData().getAllRecords().size() > 0) {
       return Result.healthy();
     } else {

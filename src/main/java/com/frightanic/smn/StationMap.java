@@ -11,6 +11,10 @@ import java.util.Map;
 public final class StationMap {
   private static final Map<String, Station> MAP = new HashMap<>();
 
+  private StationMap(){
+    // utility class
+  }
+
   static {
     MAP.put("TAE", new Station("TAE", "Aadorf / Tänikon", 710514, 259821, 47.4798656101848, 8.90487073380479));
     MAP.put("COM", new Station("COM", "Acquarossa / Comprovasco", 714998, 146440, 46.459417646146, 8.93565185399796));
