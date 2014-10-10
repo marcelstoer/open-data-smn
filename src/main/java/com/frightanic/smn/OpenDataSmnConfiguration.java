@@ -1,13 +1,14 @@
 package com.frightanic.smn;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.dropwizard.Configuration;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Getter
 @Setter
-public class OpenDataSmnConfiguration extends io.dropwizard.Configuration {
+public class OpenDataSmnConfiguration extends Configuration {
   @NotEmpty
   @JsonProperty("data.url")
   private String dataUrl;
@@ -23,6 +24,9 @@ public class OpenDataSmnConfiguration extends io.dropwizard.Configuration {
   @NotEmpty
   @JsonProperty("responseCacheTimeToLiveMinutes")
   private String responseCacheTimeToLiveMinutes;
+
+  @JsonProperty("swaggerPort")
+  private String swaggerPort;
 
   public Short getDataCacheTimeToLiveMinutes() {
     return Short.valueOf(dataCacheTimeToLiveMinutes);

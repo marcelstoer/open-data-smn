@@ -11,6 +11,8 @@ import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
+import io.federecio.dropwizard.swagger.SwaggerHostResolver;
+import org.apache.commons.lang.StringUtils;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,7 +52,13 @@ public class OpenDataSmn extends Application<OpenDataSmnConfiguration> {
 
   private void configureSwagger(OpenDataSmnConfiguration configuration, Environment environment) {
     try {
-      swaggerDropwizard.onRun(configuration, environment);
+      String swaggerPort = configuration.getSwaggerPort();
+      if (StringUtils.isEmpty(swaggerPort)) {
+        swaggerDropwizard.onRun(configuration, environment);
+      } else {
+        swaggerDropwizard.onRun(configuration, environment, SwaggerHostResolver.getSwaggerHost(),
+          Integer.parseInt(swaggerPort));
+      }
     } catch (IOException e) {
       logger.error("Failed to initialize Swagger Dropwizard.", e);
     }

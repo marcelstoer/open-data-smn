@@ -2,6 +2,7 @@ data.url: http://data.geo.admin.ch.s3.amazonaws.com/ch.meteoschweiz.swissmetnet/
 data.fileName: VQHA69.txt
 data.cacheTimeToLiveMinutes: 5
 responseCacheTimeToLiveMinutes: 1
+swaggerPort: 80
 server:
   type: simple
   applicationContextPath: /smn
