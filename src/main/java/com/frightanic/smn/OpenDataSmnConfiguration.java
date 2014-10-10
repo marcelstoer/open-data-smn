@@ -14,10 +14,6 @@ public class OpenDataSmnConfiguration extends Configuration {
   private String dataUrl;
 
   @NotEmpty
-  @JsonProperty("data.fileName")
-  private String dataFileName;
-
-  @NotEmpty
   @JsonProperty("data.cacheTimeToLiveMinutes")
   private String dataCacheTimeToLiveMinutes;
 

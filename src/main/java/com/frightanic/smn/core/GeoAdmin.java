@@ -23,7 +23,7 @@ public class GeoAdmin {
   private SmnData lastLoadedSmnData;
 
   public GeoAdmin(OpenDataSmnConfiguration configuration) {
-    dataLoader = new DataLoader(configuration.getDataUrl(), configuration.getDataFileName());
+    dataLoader = new DataLoader(configuration.getDataUrl());
     cache = CacheBuilder.newBuilder().
       expireAfterWrite(configuration.getDataCacheTimeToLiveMinutes(), TimeUnit.MINUTES).
       build(new SmnDataCacheLoader());
