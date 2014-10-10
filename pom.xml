@@ -41,8 +41,8 @@
   </issueManagement>
   <scm>
     <url>https://github.com/marcelstoer/open-data-smn</url>
-    <connection>scm:git:git@github.com/marcelstoer/open-data-smn.git</connection>
-    <developerConnection>scm:git:git@github.com/marcelstoer/open-data-smn.git</developerConnection>
+    <connection>scm:git:git@github.com:marcelstoer/open-data-smn.git</connection>
+    <developerConnection>scm:git:git@github.com:marcelstoer/open-data-smn.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
