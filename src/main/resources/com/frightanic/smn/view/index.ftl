@@ -208,11 +208,14 @@
         It's developed in the open supporting the <a href="http://opendata.ch/">OpenData.ch</a> initiative.
         Free OpenData hosting is provided by <a href="http://netcetera.com">Netcetera</a>.
       </p>
-      <p>The actual data for 10min intervals is provided by <a href="http://www.opendata.admin
-      .ch/en/dataset/messdatensmn">opendata.admin.ch</a>, the Swiss open government data <em>pilot</em> portal. Due
+
+      <p>The actual data for 10min intervals is provided by <a
+              href="http://www.opendata.admin.ch/en/dataset/messdatensmn">opendata.admin.ch</a>,
+        the Swiss open government data <em>pilot</em> portal. Due
         to the "maybe not here to stay"-nature of that portal no mid-/long-term promise can be made as for the
         sustainability of OpenData SMN. You probably don't want to base a mission-critical application on it right now.
       </p>
+
       <p>
         Rather than manually maintaining an (often outdated) API documentation here OpenData SMN relies on <a
               href="https://helloreverb.com/developers/swagger">Swagger</a>. At <a href="./swagger">./swagger</a> you
