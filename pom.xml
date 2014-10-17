@@ -4,7 +4,7 @@
 
   <groupId>com.frightanic</groupId>
   <artifactId>open-data-smn</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
 
   <name>OpenData SMN</name>
   <description>An API to serve publicly available data from the SwissMetNet.</description>
@@ -55,7 +55,7 @@
     <url>https://github.com/marcelstoer/open-data-smn</url>
     <connection>scm:git:git@github.com:marcelstoer/open-data-smn.git</connection>
     <developerConnection>scm:git:git@github.com:marcelstoer/open-data-smn.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>open-data-smn-1.0.1</tag>
   </scm>
 
   <properties>
