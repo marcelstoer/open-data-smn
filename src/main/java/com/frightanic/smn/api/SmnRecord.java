@@ -25,7 +25,7 @@ public class SmnRecord {
   @Getter(AccessLevel.NONE)
   private final Splitter splitter = Splitter.on("|");
   @Getter(AccessLevel.NONE)
-  private final DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyyMMddkkmm").withZoneUTC();
+  private final DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyyMMddHHmm").withZoneUTC();
 
   private final Station station;
   @ApiModelProperty(value = "3-char all upper-case station code")
