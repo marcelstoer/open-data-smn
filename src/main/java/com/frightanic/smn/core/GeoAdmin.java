@@ -32,9 +32,9 @@ public class GeoAdmin {
   public SmnData getSmnData() throws IOException {
     try {
       return cache.get(SMN_DATA_CACHE_KEY);
-    } catch (ExecutionException e) {
+    } catch (ExecutionException | RuntimeException e) {
       if (lastLoadedSmnData == null) {
-        throw new IOException(e.getCause());
+        throw new IOException(e);
       } else {
         logger.warn(
           "Loading data via the cache's data loader failed (cache was empty). Returning last available data" + " set.");
