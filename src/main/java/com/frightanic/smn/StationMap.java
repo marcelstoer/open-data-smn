@@ -1,6 +1,8 @@
 package com.frightanic.smn;
 
 import com.frightanic.smn.api.Station;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +11,7 @@ import java.util.Map;
  * Static map of all SMN stations. Stores meta-data for each station.
  */
 public final class StationMap {
+  private static final Logger LOGGER = LoggerFactory.getLogger(StationMap.class);
   private static final Map<String, Station> MAP = new HashMap<>();
 
   private StationMap(){
@@ -138,6 +141,10 @@ public final class StationMap {
    * @return station or null
    */
   public static Station get(String code) {
-    return MAP.get(code);
+    Station station = MAP.get(code);
+    if (station == null) {
+      LOGGER.warn("No station meta-data available for '{}'.", code);
+    }
+    return station;
   }
 }

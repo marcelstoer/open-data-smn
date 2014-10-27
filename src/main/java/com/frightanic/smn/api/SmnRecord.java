@@ -8,8 +8,6 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -19,9 +17,6 @@ import java.util.List;
 @Getter
 @ApiModel(value = "A single SMN data record")
 public class SmnRecord {
-  @Getter(AccessLevel.NONE)
-  private final Logger logger = LoggerFactory.getLogger(SmnRecord.class);
-
   @Getter(AccessLevel.NONE)
   private final Splitter splitter = Splitter.on("|");
   @Getter(AccessLevel.NONE)
@@ -56,9 +51,6 @@ public class SmnRecord {
   public SmnRecord(String sourceDataRecord) {
     List<String> values = splitter.splitToList(sourceDataRecord);
     station = StationMap.get(values.get(0));
-    if (station == null) {
-      logger.warn("No station meta-data available for '{}'. Appears to be new.", values.get(0));
-    }
     code = values.get(0);
     dateTime = dateTimeFormatter.parseDateTime(values.get(1)).toString();
     temperature = replaceDashWithNull(values.get(2));
