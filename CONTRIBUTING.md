@@ -1,10 +1,15 @@
 # Contributing Guide
 
 ## Development environment setup
+- `git clone https://github.com/marcelstoer/open-data-smn.git`
+- `cd open-data-smn/`
+- `mvn package`
+- `java -jar target/open-data-smn-1.0.2-SNAPSHOT.jar server open-data-smn-dev.yml`
+- [http://localhost:4711/swagger](http://localhost:4711/swagger)
 
 ## Commit messages
 
-From: [[http://git-scm.com/book/ch5-2.html]]
+From: [http://git-scm.com/book/ch5-2.html](http://git-scm.com/book/ch5-2.html)
 <pre>
 Short (50 chars or less) summary of changes
 
