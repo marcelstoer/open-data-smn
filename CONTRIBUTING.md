@@ -1,6 +1,8 @@
 # Contributing Guide
 This project is built on top of [Dropwizard](http://dropwizard.io/). If you're unfamiliar with that I suggest you spend 30min to go through its excellent Getting Started tutorial. You will like what you see, I promise.
 
+Of course you have to have an up-to-data JDK and Maven installed but if you've come this far I assume you already know that.
+
 ## Development environment setup
 - `git clone https://github.com/marcelstoer/open-data-smn.git`
 - `cd open-data-smn/`
