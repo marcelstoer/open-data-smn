@@ -18,7 +18,7 @@ public class SmnData {
   public SmnData(String sourceData) {
     List<String> records = Splitter.on("\n").trimResults().omitEmptyStrings().splitToList(sourceData);
     smnRecords = new HashMap<>(records.size() - 2);
-    // omit first three lines (the empty one was alreay removed be the Splitter, omitEmptyStrings)
+    // omit first three lines (the empty one was already removed be the Splitter, omitEmptyStrings)
     /*
      * MeteoSchweiz / MeteoSuisse / MeteoSvizzera / MeteoSwiss
      *
