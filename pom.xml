@@ -233,7 +233,11 @@
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
         <configuration>
-          <!--<excludes />-->
+          <excludes>
+            <!-- External classes (i.e. copy/pasted code) are excluded -->
+            <exclude>**/com/frightanic/smn/util/SwissGeoProjection.class</exclude>
+            <exclude>**/com/frightanic/smn/util/ResponseCacheFilter.class</exclude>
+          </excludes>
         </configuration>
         <executions>
           <execution>
