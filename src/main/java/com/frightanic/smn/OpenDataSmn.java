@@ -4,13 +4,14 @@ import com.frightanic.smn.core.GeoAdmin;
 import com.frightanic.smn.health.SmnHealthCheck;
 import com.frightanic.smn.resource.RootResource;
 import com.frightanic.smn.resource.SmnResource;
-import io.federecio.dropwizard.swagger.SwaggerDropwizard;
-import com.googlecode.webutilities.filters.ResponseCacheFilter;
+import com.frightanic.smn.util.ResponseCacheFilter;
+import com.frightanic.smn.util.ResponseHeaderFilter;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
+import io.federecio.dropwizard.swagger.SwaggerDropwizard;
 import io.federecio.dropwizard.swagger.SwaggerHostResolver;
 import org.apache.commons.lang.StringUtils;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
@@ -45,9 +46,11 @@ public class OpenDataSmn extends Application<OpenDataSmnConfiguration> {
   @Override
   public void run(OpenDataSmnConfiguration configuration, Environment environment) {
     configureSwagger(configuration, environment);
-    registerCrossOriginFilter(environment);
     environment.jersey().register(new RootResource());
     configureSmn(configuration, environment);
+    registerCrossOriginFilter(environment);
+    registerSmnCachingFilter(configuration, environment);
+    registerResponseHeaderFilter(environment);
   }
 
   private void configureSwagger(OpenDataSmnConfiguration configuration, Environment environment) {
@@ -70,7 +73,12 @@ public class OpenDataSmn extends Application<OpenDataSmnConfiguration> {
     SmnHealthCheck healthCheck = new SmnHealthCheck(geoAdmin);
     environment.healthChecks().register("smn", healthCheck);
     environment.jersey().register(smnResource);
-    registerSmnCachingFilter(configuration, environment);
+  }
+
+  private void registerCrossOriginFilter(Environment environment) {
+    FilterRegistration.Dynamic crossOriginFilter = environment.servlets().addFilter("crossOriginFilter",
+      new CrossOriginFilter());
+    crossOriginFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn/*");
   }
 
   private void registerSmnCachingFilter(OpenDataSmnConfiguration configuration, Environment environment) {
@@ -81,9 +89,9 @@ public class OpenDataSmn extends Application<OpenDataSmnConfiguration> {
     responseCacheFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn/*");
   }
 
-  private void registerCrossOriginFilter(Environment environment) {
-    FilterRegistration.Dynamic crossOriginFilter = environment.servlets().addFilter("crossOriginFilter",
-      new CrossOriginFilter());
-    crossOriginFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn/*");
+  private void registerResponseHeaderFilter(Environment environment) {
+    FilterRegistration.Dynamic responseHeaderFilter = environment.servlets().addFilter("responseHeaderFilter",
+      new ResponseHeaderFilter());
+    responseHeaderFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/smn/*");
   }
 }
