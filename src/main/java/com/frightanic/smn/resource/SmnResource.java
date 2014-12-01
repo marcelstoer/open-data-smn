@@ -10,6 +10,7 @@ import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
 import org.apache.commons.lang.StringUtils;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -23,7 +24,8 @@ import java.util.Collection;
 @Api(value = "smn", description = "Methods to retrieve SwissMetNet data. The actual data is provided by frightanic"
   + ".admin.ch. A new set of data is released every 10min.")
 public class SmnResource {
-  private static final String GEO_JSON_MIME_TYPE_UTF8 = "application/vnd.geo+json; charset=UTF-8";
+  private static final String GEO_JSON_MIME_TYPE = "application/vnd.geo+json";
+  private static final String GEO_JSON_MIME_TYPE_UTF8 = GEO_JSON_MIME_TYPE + "; charset=UTF-8";
   private final GeoAdmin geoAdmin;
 
   public SmnResource(GeoAdmin geoAdmin) {
@@ -44,6 +46,7 @@ public class SmnResource {
   @ApiOperation(value = "Get all data from all SMN stations represented as GeoJSON (requires GeoJSON accept header)",
     notes = "Data is cached with a short TTL.",
     response = FeatureCollection.class)
+  @Consumes(GEO_JSON_MIME_TYPE)
   @Produces(GEO_JSON_MIME_TYPE_UTF8)
   public FeatureCollection listGeoJson(@ApiParam(value = "geo projection i.e. CRS, either CH1903 or WGS84 (default)",
     required = false) @QueryParam("projection") String projection) throws IOException {
