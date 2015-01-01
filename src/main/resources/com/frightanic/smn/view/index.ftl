@@ -203,7 +203,7 @@
     <div id="content">
       <p>
         OpenData SMN is a simple REST API for <a
-              href="http://www.meteoschweiz.admin.ch/web/en/climate/observation_systems/surface/swissmetnet.html">SwissMetNet
+              href="http://www.meteoschweiz.admin.ch/home/mess-und-prognosesysteme/bodenstationen/automatisches-messnetz.html">SwissMetNet
         data</a>.
         It's developed in the open supporting the <a href="http://opendata.ch/">OpenData.ch</a> initiative.
         Free OpenData hosting is provided by <a href="http://netcetera.com">Netcetera</a>.
