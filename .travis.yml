@@ -1,4 +1,4 @@
-# Use docker-based build environment (instead of openvz) as per http://goo.gl/TxCoVM
+# Use Docker-based build environment (instead of OpenVZ) as per http://goo.gl/TxCoVM
 sudo: false
 
 language: java
@@ -6,6 +6,7 @@ jdk:
 - oraclejdk7
 - openjdk7
 
+# http://docs.travis-ci.com/user/caching/
 cache:
   directories:
     - '$HOME/.m2/repository'
