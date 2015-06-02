@@ -1,8 +1,9 @@
 # OpenData SMN 
 
 [![Build Status](https://travis-ci.org/marcelstoer/open-data-smn.svg?branch=master)](https://travis-ci.org/marcelstoer/open-data-smn)
-[![Coverage Status](https://coveralls.io/repos/marcelstoer/open-data-smn/badge.png?branch=master)](https://coveralls.io/r/marcelstoer/open-data-smn?branch=master)
+[![Coverage Status](https://coveralls.io/repos/marcelstoer/open-data-smn/badge.svg?branch=master)](https://coveralls.io/r/marcelstoer/open-data-smn?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.frightanic/open-data-smn/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.frightanic/open-data-smn/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/marcelstoer/open-data-smn/blob/master/LICENSE)
 
 OpenData SMN is a simple REST API for [SwissMetNet data](http://www.meteoschweiz.admin.ch/home/mess-und-prognosesysteme/bodenstationen/automatisches-messnetz.html). It's developed in the open supporting the [OpenData.ch](http://opendata.ch/) initiative. Free OpenData hosting is provided by [Netcetera](http://netcetera.com) at [data.netcetera.com/smn](http://data.netcetera.com/smn/).
 
