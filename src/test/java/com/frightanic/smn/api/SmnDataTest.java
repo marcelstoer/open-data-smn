@@ -1,6 +1,11 @@
 package com.frightanic.smn.api;
 
+import lombok.SneakyThrows;
+import org.apache.commons.io.IOUtils;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -24,5 +29,22 @@ public class SmnDataTest {
     // then
     assertThat(data.getAllRecords().size(), is(1));
     assertThat(data.getRecordFor("TAE").getCode(), is("TAE"));
+  }
+
+  /**
+   * See method name.
+   */
+  @Test
+  @SneakyThrows(IOException.class)
+  public void shouldParseSampleInput() {
+    // given
+    try (InputStream inputStream = getClass().getResourceAsStream("/VQHA69.csv")) {
+      // when
+      SmnData data = new SmnData(IOUtils.toString(inputStream, "UTF-8"));
+      // then
+      assertThat(data.getAllRecords().size(), is(113));
+      assertThat(data.getRecordFor("TAE").getCode(), is("TAE")); // first
+      assertThat(data.getRecordFor("THU").getCode(), is("THU")); // last
+    }
   }
 }
