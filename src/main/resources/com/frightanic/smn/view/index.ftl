@@ -210,10 +210,8 @@
       </p>
 
       <p>The actual data for 10min intervals is provided by <a
-              href="http://www.opendata.admin.ch/en/dataset/messdatensmn">opendata.admin.ch</a>,
-        the Swiss open government data <em>pilot</em> portal. Due
-        to the "maybe not here to stay"-nature of that portal no mid-/long-term promise can be made as for the
-        sustainability of OpenData SMN. You probably don't want to base a mission-critical application on it right now.
+              href="https://opendata.swiss/de/dataset/messdaten-smn-swissmetnet">opendata.swiss</a>,
+        the Swiss open government data portal.
       </p>
 
       <p>
