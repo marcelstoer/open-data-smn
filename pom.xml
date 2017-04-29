@@ -21,7 +21,7 @@
     <developer>
       <name>Marcel Stör</name>
       <email>my first name @ my TLD</email>
-      <url>http://frightanic.com</url>
+      <url>https://frightanic.com</url>
       <timezone>+1</timezone>
       <roles>
         <role>developer</role>
@@ -69,8 +69,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <source.version>1.7</source.version>
-    <target.version>1.7</target.version>
+    <source.version>1.8</source.version>
+    <target.version>1.8</target.version>
 
     <!-- plugin versions -->
     <coveralls-maven-plugin.version>2.2.0</coveralls-maven-plugin.version>
