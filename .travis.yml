@@ -3,8 +3,7 @@ sudo: false
 
 language: java
 jdk:
-- oraclejdk7
-- openjdk7
+- oraclejdk8
 
 # http://docs.travis-ci.com/user/caching/
 cache:
