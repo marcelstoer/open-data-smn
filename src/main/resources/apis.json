@@ -1,0 +1,48 @@
+{
+  "name": "OpenData SMN",
+  "description": "OpenData SMN is a simple REST API for SwissMetNet data. It provides close to real-time weather data of all SwissMetNet weather stations in Switzerland. The data is updated every 10min.\nThe API is developed in the open supporting the OpenData.ch initiative. ",
+  "url": "https://opendata.netcetera.com/smn/apis.json",
+  "image": "http://www.meteoschweiz.admin.ch/content/meteoswiss/de/home/mess-und-prognosesysteme/bodenstationen/automatisches-messnetz/_jcr_content/content/image_0.mchimg.jpg/1453205382210.jpg",
+  "specificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "SMN  ",
+      "description": "Get all data from all SMN stations",
+      "image": "",
+      "baseURL": "https://opendata.netcetera.com/smn/smn",
+      "humanURL": "https://opendata.netcetera.com/smn/",
+      "properties": [
+        {
+          "type": "Swagger",
+          "url": "https://opendata.netcetera.com/smn/api-docs"
+        }
+      ],
+      "contact": []
+    },
+    {
+      "name": "SMN single station",
+      "description": "Get data for a single SMN station",
+      "image": "",
+      "baseURL": "https://opendata.netcetera.com/smn/smn/{code}",
+      "humanURL": "https://opendata.netcetera.com/smn",
+      "tags": [],
+      "properties": [],
+      "contact": []
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "Marcel Stör",
+      "X-github": "https://github.com/marcelstoer",
+      "url": "https://frightanic.com/"
+    }
+  ],
+  "tags": [
+    "weather",
+    "OpenData",
+    "SwissMetNet"
+  ],
+  "include": [],
+  "created": "2015-10-31",
+  "modified": "2015-10-31"
+}
