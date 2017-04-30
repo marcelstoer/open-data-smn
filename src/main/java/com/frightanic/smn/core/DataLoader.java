@@ -1,25 +1,29 @@
 package com.frightanic.smn.core;
 
 import com.frightanic.smn.api.SmnData;
-import lombok.SneakyThrows;
 import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.LaxRedirectStrategy;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-public class DataLoader {
-  private final URL smnDataUrl;
+class DataLoader {
+  private final HttpClient httpClient;
+  private final HttpGet httpGet;
 
-  @SneakyThrows(MalformedURLException.class)
-  public DataLoader(String smnDataUrl) {
-    this.smnDataUrl = new URL(smnDataUrl);
+  DataLoader(String smnDataUrl) {
+    httpClient = HttpClientBuilder.create().setRedirectStrategy(new LaxRedirectStrategy()).build();
+    httpGet = new HttpGet(smnDataUrl);
   }
 
-  public SmnData loadSmnData() throws IOException {
-    try (InputStream inputStream = new BufferedInputStream(smnDataUrl.openStream(), 1024)) {
+  SmnData loadSmnData() throws IOException {
+    HttpEntity entity = httpClient.execute(httpGet).getEntity();
+    try (InputStream inputStream = new BufferedInputStream(entity.getContent(), 1024)) {
       return new SmnData(IOUtils.toString(inputStream, "UTF-8"));
     }
   }

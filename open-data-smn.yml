@@ -20,3 +20,8 @@ logging:
     - type: file
       currentLogFilename: /wwwprod/data/smn/logs/open-data-smn.log
       archivedLogFilenamePattern: /wwwprod/data/smn/logs/open-data-smn-%d.log.gz
+  loggers:
+      # https://hc.apache.org/httpcomponents-client-ga/logging.html
+      # switch to DEBUG to see log messages
+      "org.apache.http.headers": INFO
+      "org.apache.http.wire": INFO

@@ -74,6 +74,13 @@
     <orderEntry type="library" name="Maven: net.sourceforge.argparse4j:argparse4j:0.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty.toolchain.setuid:jetty-setuid-java:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-client:0.7.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.18.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey.contribs:jersey-apache-client4:1.18.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.3.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.codahale.metrics:metrics-httpclient:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-assets:0.7.1" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-views-freemarker:0.7.1" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-views:0.7.1" level="project" />

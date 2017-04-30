@@ -8,3 +8,10 @@ server:
   connector:
     type: http
     port: 4711
+logging:
+  level: INFO
+  appenders:
+    - type: console
+  loggers:
+    "org.apache.http.headers": DEBUG
+    "org.apache.http.wire": DEBUG
