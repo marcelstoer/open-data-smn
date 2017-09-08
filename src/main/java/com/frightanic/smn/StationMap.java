@@ -9,9 +9,8 @@ import java.util.Map;
 
 /**
  * Static map of all SMN stations. Stores meta-data for each station. Source:
- *
- * http://www.opendata.admin.ch/de/dataset/messdatensmn -> 03-10min_Daten_legenden.zip -> VQHA69_DE.txt contains a
- * list of stations with all their metadata.
+ * http://data.geo.admin.ch/ch.meteoschweiz.swissmetnet/info/VQHA69_DE.txt contains a list of stations with all their
+ * metadata.
  */
 public final class StationMap {
   private static final Logger LOGGER = LoggerFactory.getLogger(StationMap.class);
@@ -41,15 +40,15 @@ public final class StationMap {
     MAP.put("GSB", new Station("GSB", "Col du Grand St-Bernard", 579200, 79720, 45.8687853402045, 7.17079950096375,
       2472));
     MAP.put("DAV", new Station("DAV", "Davos", 783514, 187457, 46.8129562080056, 9.84348961918048, 1594));
-    MAP.put("DIS", new Station("DIS", "Disentis / Sedrun", 708188, 173789, 46.7065316128356, 8.85344049269398, 1197));
+    MAP.put("DIS", new Station("DIS", "Disentis", 708188, 173789, 46.7065316128356, 8.85344049269398, 1197));
     MAP.put("ENG", new Station("ENG", "Engelberg", 674156, 186097, 46.8218898122211, 8.41044407966648, 1035));
     MAP.put("EVO", new Station("EVO", "Evolène / Villa", 605415, 106740, 46.1121374956964, 7.50867577695555, 1825));
     MAP.put("FAH", new Station("FAH", "Fahy", 562458, 252676, 47.4238169986586, 6.94110403084587, 596));
-    MAP.put("GVE", new Station("GVE", "Genève-Cointrin", 498903, 122624, 46.247449465089, 6.12772466049919, 420));
+    MAP.put("GVE", new Station("GVE", "Genève / Cointrin", 498903, 122624, 46.247449465089, 6.12772466049919, 420));
     MAP.put("GLA", new Station("GLA", "Glarus", 723752, 210567, 47.0345849430787, 9.0669015770812, 516));
     MAP.put("GRH", new Station("GRH", "Grimsel Hospiz", 668583, 158215, 46.5716911603333, 8.33325155123996, 1980));
     MAP.put("GOE", new Station("GOE", "Gösgen", 640417, 245937, 47.3630361197977, 7.97366228620389, 380));
-    MAP.put("GUE", new Station("GUE", "Gütsch ob Andermatt", 690140, 167590, 46.6534573364687, 8.61624444240366, 2287));
+    MAP.put("GUE", new Station("GUE", "Gütsch, Andermatt", 690140, 167590, 46.6534573364687, 8.61624444240366, 2287));
     MAP.put("GUT", new Station("GUT", "Güttingen", 738419, 273960, 47.6017140906501, 9.27937890904876, 440));
     MAP.put("HOE", new Station("HOE", "Hörnli", 713515, 247755, 47.3708509834111, 8.94161219191723, 1132));
     MAP.put("INT", new Station("INT", "Interlaken", 633019, 169093, 46.6722444362808, 7.87014022921899, 577));
