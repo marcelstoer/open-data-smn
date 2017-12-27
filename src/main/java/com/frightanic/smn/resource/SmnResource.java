@@ -21,8 +21,8 @@ import java.io.IOException;
 import java.util.Collection;
 
 @Path("/smn")
-@Api(value = "smn", description = "Methods to retrieve SwissMetNet data. The actual data is provided by frightanic"
-  + ".admin.ch. A new set of data is released every 10min.")
+@Api(value = "smn", description = "Methods to retrieve SwissMetNet data. The actual data is provided by "
+  + "https://opendata.swiss/de/dataset/messdaten-smn-swissmetnet.  A new set of data is released every 10min.")
 public class SmnResource {
   private static final String GEO_JSON_MIME_TYPE = "application/vnd.geo+json";
   private static final String GEO_JSON_MIME_TYPE_UTF8 = GEO_JSON_MIME_TYPE + "; charset=UTF-8";
