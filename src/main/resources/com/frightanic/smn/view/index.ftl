@@ -216,15 +216,14 @@
 
       <p>
         Rather than manually maintaining an (often outdated) API documentation here OpenData SMN relies on <a
-              href="https://helloreverb.com/developers/swagger">Swagger</a>. At <a href="./swagger">./swagger</a> you
+              href="https://swagger.io/swagger-ui/">Swagger-UI</a>. At <a href="./swagger">./swagger</a> you
         find an automatically generated, 100% up-to-date and - best of all - executable API documentation. Each
         REST operation can be executed directly from the Swagger UI.
       </p>
     </div>
   </div>
   <div id="footer">
-    Copyright &copy; <a href="http://frightanic.com">Marcel Stör</a><!-- | <a href="https://github
-      .com/marcelstoer/open-data-smn">fork on GitHub</a>-->
+    Copyright &copy; <a href="http://frightanic.com">Marcel Stör</a>
   </div>
 </div>
 <a href="https://github.com/marcelstoer/open-data-smn"><img style="position: absolute; top: 0; right: 0; border: 0;"
