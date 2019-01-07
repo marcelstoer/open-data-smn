@@ -18,7 +18,7 @@ import java.util.List;
 @ApiModel(value = "A single SMN data record")
 public class SmnRecord {
   @Getter(AccessLevel.NONE)
-  private final Splitter splitter = Splitter.on("|");
+  private final Splitter splitter = Splitter.on(";");
   @Getter(AccessLevel.NONE)
   private final DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern("yyyyMMddHHmm").withZoneUTC();
 
@@ -54,15 +54,15 @@ public class SmnRecord {
     code = values.get(0);
     dateTime = dateTimeFormatter.parseDateTime(values.get(1)).toString();
     temperature = replaceDashWithNull(values.get(2));
-    sunshine = replaceDashWithNull(values.get(3));
-    precipitation = replaceDashWithNull(values.get(4));
-    windDirection = replaceDashWithNull(values.get(5));
-    windSpeed = replaceDashWithNull(values.get(6));
-    qnhPressure = replaceDashWithNull(values.get(7));
-    gustPeak = replaceDashWithNull(values.get(8));
-    humidity = replaceDashWithNull(values.get(9));
-    qfePressure = replaceDashWithNull(values.get(10));
-    qffPressure = replaceDashWithNull(values.get(11));
+    sunshine = replaceDashWithNull(values.get(4));
+    precipitation = replaceDashWithNull(values.get(3));
+    windDirection = replaceDashWithNull(values.get(8));
+    windSpeed = replaceDashWithNull(values.get(9));
+    qnhPressure = replaceDashWithNull(values.get(13));
+    gustPeak = replaceDashWithNull(values.get(10));
+    humidity = replaceDashWithNull(values.get(6));
+    qfePressure = replaceDashWithNull(values.get(11));
+    qffPressure = replaceDashWithNull(values.get(12));
   }
 
   private String replaceDashWithNull(String s) {

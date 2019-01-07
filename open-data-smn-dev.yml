@@ -1,4 +1,4 @@
-data.url: https://data.geo.admin.ch/ch.meteoschweiz.swissmetnet/VQHA69.csv
+data.url: https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/VQHA80.csv
 data.cacheTimeToLiveMinutes: 5
 responseCacheTimeToLiveMinutes: 1
 server:

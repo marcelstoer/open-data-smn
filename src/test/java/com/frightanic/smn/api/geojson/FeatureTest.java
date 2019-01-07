@@ -20,7 +20,7 @@ public class FeatureTest {
    */
   @Before
   public void setup() {
-    smnRecord = new SmnRecord("TAE|201411112240|6.1|0|0.0|231|3.2|1003.5|7.6|96|940.9|1004.4");
+    smnRecord = new SmnRecord("TAE;201901061500;1.9;0.0;0;53;90;0.4;228;5.4;10.4;967.7;1034.1;1031.8;-;-;-;-;-;-;-;-");
   }
 
   /**

@@ -16,7 +16,7 @@ public class SmnRecordTest {
   @Test
   public void shouldDetectStation() {
     // given
-    String rawData = "HOE|201407192150|23.8|0|0.0|138|16.2|1016.3|24.5|36|887.0|-";
+    String rawData = "HOE;201901061500;-1.9;0.0;0;31;96;-2.4;271;15.1;24.1;898.5;-;1029.2;1573.2;-;-;-;-;-;-;-";
     // when
     SmnRecord record = new SmnRecord(rawData);
     // then
@@ -30,7 +30,7 @@ public class SmnRecordTest {
   @Test
   public void shouldReplaceDashWithNull() {
     // given
-    String rawData = "HOE|201407192150|23.8|0|0.0|138|16.2|1016.3|24.5|36|887.0|-";
+    String rawData = "HOE;201901061500;-1.9;0.0;0;31;96;-2.4;271;15.1;24.1;898.5;-;1029.2;1573.2;-;-;-;-;-;-;-";
     // when
     SmnRecord record = new SmnRecord(rawData);
     // then
@@ -42,7 +42,7 @@ public class SmnRecordTest {
   @Test
   public void shouldMapStationToNullIfUnknown() {
     // given
-    String rawData = "FOO|201407192150|23.8|0|0.0|138|16.2|1016.3|24.5|36|887.0|-";
+    String rawData = "FOO;201901061500;-1.9;0.0;0;31;96;-2.4;271;15.1;24.1;898.5;-;1029.2;1573.2;-;-;-;-;-;-;-";
     // when
     SmnRecord record = new SmnRecord(rawData);
     // then
