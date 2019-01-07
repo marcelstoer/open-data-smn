@@ -210,7 +210,7 @@
       </p>
 
       <p>The actual data for 10min intervals is provided by <a
-              href="https://opendata.swiss/de/dataset/messdaten-smn-swissmetnet">opendata.swiss</a>,
+              href="https://opendata.swiss/de/dataset/automatische-wetterstationen-aktuelle-messwerte">opendata.swiss</a>,
         the Swiss open government data portal.
       </p>
 
