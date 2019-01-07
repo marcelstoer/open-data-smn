@@ -7,7 +7,7 @@ Of course you have to have an up-to-data JDK and Maven installed but if you've c
 - `git clone https://github.com/marcelstoer/open-data-smn.git`
 - `cd open-data-smn/`
 - `mvn package`
-- `java -jar target/open-data-smn-1.0.2-SNAPSHOT.jar server open-data-smn-dev.yml`
+- `java -jar target/open-data-smn-1.5.1-SNAPSHOT.jar server open-data-smn-dev.yml` <- adjust the version!
 - [http://localhost:4711/swagger](http://localhost:4711/swagger)
 
 ## Commit messages
