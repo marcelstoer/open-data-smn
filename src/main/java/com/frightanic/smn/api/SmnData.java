@@ -22,7 +22,7 @@ public class SmnData {
     /*
      * MeteoSchweiz / MeteoSuisse / MeteoSvizzera / MeteoSwiss
      *
-     * stn|time|tre200s0|sre000z0|rre150z0|dkl010z0|fu3010z0|pp0qnhs0|fu3010z1|ure200s0|prestas0|pp0qffs0
+     * stn;time;tre200s0;rre150z0;sre000z0;gre000z0;ure200s0;tde200s0;dkl010z0;fu3010z0;fu3010z1;prestas0;pp0qffs0;pp0qnhs0;ppz850s0;ppz700s0;dv1towz0;fu3towz0;fu3towz1;ta1tows0;uretows0;tdetows0
      */
     for (int i = 2; i < records.size(); i++) {
       SmnRecord smnRecord = new SmnRecord(records.get(i));
