@@ -7,7 +7,7 @@ server:
   adminContextPath: /admin
   connector:
     type: http
-    port: 4711
+    port: 4812
 logging:
   level: INFO
   appenders:
