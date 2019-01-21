@@ -73,15 +73,15 @@
     <target.version>1.8</target.version>
 
     <!-- plugin versions -->
-    <coveralls-maven-plugin.version>2.2.0</coveralls-maven-plugin.version>
-    <jacoco-maven-plugin.version>0.7.2.201409121644</jacoco-maven-plugin.version>
-    <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
-    <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
-    <maven-jar-plugin.version>2.5</maven-jar-plugin.version>
-    <maven-javadoc-plugin.version>2.10.1</maven-javadoc-plugin.version>
-    <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
-    <maven-release-plugin.version>2.5.1</maven-release-plugin.version>
-    <maven-shade-plugin.version>2.3</maven-shade-plugin.version>
+    <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+    <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+    <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+    <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+    <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+    <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+    <maven-shade-plugin.version>3.2.1</maven-shade-plugin.version>
     <maven-source-plugin.version>2.3</maven-source-plugin.version>
 
     <!-- dependency versions -->
