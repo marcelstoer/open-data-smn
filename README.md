@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/marcelstoer/open-data-smn.svg?branch=master)](https://travis-ci.org/marcelstoer/open-data-smn)
 [![Coverage Status](https://coveralls.io/repos/marcelstoer/open-data-smn/badge.svg?branch=master)](https://coveralls.io/r/marcelstoer/open-data-smn?branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.frightanic%3Aopen-data-smn&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.frightanic%3Aopen-data-smn)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.frightanic/open-data-smn/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.frightanic/open-data-smn/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/marcelstoer/open-data-smn/blob/master/LICENSE)
 
