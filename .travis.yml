@@ -6,6 +6,7 @@ jdk:
 cache:
   directories:
     - $HOME/.m2
+    - $HOME/.sonar/cache
 
 addons:
   # https://docs.travis-ci.com/user/sonarcloud/
