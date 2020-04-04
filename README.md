@@ -18,11 +18,12 @@ v1.1 supports [GeoJSON](http://en.wikipedia.org/wiki/GeoJSON) through `Accept` h
 You can very easily host this tiny app yourself with Docker or in the cloud.
 
 ### Docker
-There's a Docker image at [https://hub.docker.com/r/marcelstoer/open-data-smn](https://dashboard.heroku.com) for the following architectures:
+There's a Docker image at [https://hub.docker.com/r/marcelstoer/open-data-smn](https://hub.docker.com/r/marcelstoer/open-data-smn) for the following architectures:
 
 - linux/amd64, 
 - linux/arm/v7
 - linux/arm64
+
 The ARM images allow you to run this on Raspberry Pi.
 
 ### Cloud
