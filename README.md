@@ -14,6 +14,23 @@ Rather than manually maintaining an (often outdated) API documentation here Open
 
 v1.1 supports [GeoJSON](http://en.wikipedia.org/wiki/GeoJSON) through `Accept` header content negotiation.
 
+## Hosting
+You can very easily host this tiny app yourself with Docker or in the cloud.
+
+### Docker
+There's a Docker image at [https://hub.docker.com/r/marcelstoer/open-data-smn](https://dashboard.heroku.com) for the following architectures:
+
+- linux/amd64, 
+- linux/arm/v7
+- linux/arm64
+The ARM images allow you to run this on Raspberry Pi.
+
+### Cloud
+Every cloud is different but here's an example. Running this on [Heroku](https://dashboard.heroku.com) (free!) is super easy.
+
+- On GitHub: fork this repo
+- On Heroku: apen an account, create a new app (ignore the pipeline settings), connect your GitHub fork for the deployment, tell Heroku to deploy the `heroku` branch. Done! 
+
 ## Contributing
 Please have a look at the [contributing guidelines](CONTRIBUTING.md) if you want to improve this project.
 
