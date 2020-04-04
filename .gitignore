@@ -5,9 +5,8 @@
 *.war
 *.ear
 
-.idea/libraries/**
-.idea/artifacts/**
-.idea/workspace.xml
-.idea/tasks.xml
 **/target
 /target
+
+*.iml
+.idea
