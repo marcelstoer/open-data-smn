@@ -89,7 +89,7 @@
     <dropwizard.version>0.7.1</dropwizard.version>
     <dropwizard-swagger.version>0.5.2</dropwizard-swagger.version>
     <lombok.version>1.14.8</lombok.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <mockito.version>1.10.17</mockito.version>
     <webutilities.version>0.0.7</webutilities.version>
   </properties>
