@@ -85,7 +85,7 @@
     <maven-source-plugin.version>2.3</maven-source-plugin.version>
 
     <!-- dependency versions -->
-    <commons-io.version>2.4</commons-io.version>
+    <commons-io.version>2.7</commons-io.version>
     <dropwizard.version>0.7.1</dropwizard.version>
     <dropwizard-swagger.version>0.5.2</dropwizard-swagger.version>
     <lombok.version>1.14.8</lombok.version>
