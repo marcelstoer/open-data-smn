@@ -1,0 +1,18 @@
+quarkus:
+  application:
+    name: open-data-smn
+  cache:
+    caffeine:
+      '"smn"':
+        expire-after-write: 5M
+      '"http"':
+        expire-after-write: 1M
+  http:
+    port: 8080
+    header:
+      '"Cache-Control"':
+        value: "max-age=300"
+  swagger-ui:
+    always-include: true
+open-data-smn:
+  data-uri: https://data.geo.admin.ch/ch.meteoschweiz.messwerte-aktuell/VQHA80.csv

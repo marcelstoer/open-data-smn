@@ -1,0 +1,246 @@
+<!-- template from http://www.html5webtemplates.co.uk/templates.html - black & white -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>OpenData SMN - SwissMetNet SMN for OpenData.ch</title>
+    <meta name="description" content="OpenData SMN is a simple API for SwissMetNet data under the OpenData.ch umbrella"
+    />
+    <meta name="keywords" content="OpenData, SwissMetNet, Swiss Met Net, API, JSON"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="favicon-128.png">
+    <style>
+        html {
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: normal .78em arial, sans-serif;
+            background: #444;
+            color: #555;
+        }
+
+        p {
+            padding: 0 0 16px 0;
+            line-height: 1.7em;
+        }
+
+        img {
+            border: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font: normal 175% 'century gothic', arial, sans-serif;
+            color: #111;
+            margin: 0 0 15px 0;
+            padding: 15px 0 5px 0;
+        }
+
+        h2 {
+            font: normal 175% 'century gothic', arial, sans-serif;
+            color: #444;
+        }
+
+        h4, h5, h6 {
+            margin: 0;
+            padding: 0 0 5px 0;
+            font: normal 120% arial, sans-serif;
+            color: #555;
+        }
+
+        h5, h6 {
+            font: italic 95% arial, sans-serif;
+            padding: 0 0 15px 0;
+            color: #000;
+        }
+
+        h6 {
+            color: #888;
+        }
+
+        a, a:hover {
+            outline: none;
+            color: #111;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        blockquote {
+            margin: 20px 0 20px 0;
+            padding: 10px 20px 0 20px;
+            border: 1px solid #E5E5DB;
+            background: #F5F5F1;
+        }
+
+        ul {
+            margin: 2px 0 22px 17px;
+        }
+
+        ul li {
+            list-style-type: circle;
+            margin: 0 0 6px 0;
+            padding: 0 0 4px 5px;
+        }
+
+        ol {
+            margin: 8px 0 22px 20px;
+        }
+
+        ol li {
+            margin: 0 0 11px 0;
+        }
+
+        #main, #header, #logo, #menubar, #site_content, #footer {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #main {
+            width: 910px;
+            background: url(content.png) repeat-y;
+        }
+
+        #header {
+            width: 890px;
+            /*background: url(back.png) repeat-x;*/
+        }
+
+        #logo {
+            width: 890px;
+            position: relative;
+            height: 200px;
+            background: url(logo.jpg) no-repeat;
+        }
+
+        #logo #logo_text {
+            position: absolute;
+            top: 0px;
+            left: 30px;
+        }
+
+        #logo h1, #logo h2 {
+            font: normal 300% 'century gothic', arial, sans-serif;
+            border-bottom: 0;
+            text-transform: none;
+            margin: 0;
+        }
+
+        #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover {
+            padding: 10px 0 0 0;
+            color: #FFF;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+        }
+
+        #logo_text h1 a .logo_colour {
+            color: #555;
+        }
+
+        #logo_text h2 {
+            font-size: 130%;
+            padding: 0;
+            color: #444;
+        }
+
+        #site_content {
+            width: 890px;
+            overflow: hidden;
+            background: #F8F8F8;
+        }
+
+        #content {
+            text-align: left;
+            width: 600px;
+            float: left;
+            padding: 20px 0 15px 30px;
+        }
+
+        #content ul {
+            margin: 2px 0 22px 0px;
+        }
+
+        #content ul li {
+            list-style-type: none;
+            background: url(bullet.png) no-repeat;
+            margin: 0 0 6px 0;
+            padding: 0 0 4px 25px;
+            line-height: 1.5em;
+        }
+
+        #footer {
+            width: 890px;
+            height: 33px;
+            padding: 20px 0 4px 0;
+            text-align: center;
+            background: #555;
+            color: #AAA;
+            border-top: 1px solid #FFF;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-size: 80%;
+        }
+
+        #footer a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            color: #FFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="main">
+    <div id="header">
+        <div id="logo">
+            <div id="logo_text">
+                <h1><a href="./">OpenData SMN</a></h1>
+
+                <h2>A simple API for SwissMetNet data</h2>
+            </div>
+        </div>
+    </div>
+    <div id="site_content">
+        <div id="content">
+            <p>
+                OpenData SMN is a simple REST API for <a
+                    href="https://www.meteoschweiz.admin.ch/home/mess-und-prognosesysteme/bodenstationen/automatisches-messnetz.html">SwissMetNet
+                data</a>.
+                It's developed in the open supporting the <a href="http://opendata.ch/">OpenData.ch</a> initiative.
+            </p>
+
+            <p>The actual data for 10min intervals is provided by <a
+                    href="https://opendata.swiss/de/dataset/automatische-wetterstationen-aktuelle-messwerte">opendata.swiss</a>,
+                the Swiss open government data portal.
+            </p>
+            <h2>Getting started</h2>
+            <ul>
+                <li>navigate to the <a href="./smn">/smn</a> resource to fetch the latest available data set</li>
+                <li>browse the <a href="./q/swagger-ui">executable API documentation</a> to discover the full API</li>
+                <li>download <a href="./q/openapi">a <em>generated</em> OpenAPI v3 YAML contract</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; <a href="http://frightanic.com">Marcel Stör</a>
+    </div>
+</div>
+<a href="https://github.com/marcelstoer/open-data-smn">
+    <img style="position: absolute; top: 0; right: 0; border: 0;"
+         src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
+         alt="Fork me on GitHub"
+         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+</a>
+</body>
+</html>
