@@ -19,10 +19,7 @@ v1.1+ supports [GeoJSON](http://en.wikipedia.org/wiki/GeoJSON) through `Accept` 
 There's a Docker image at [https://hub.docker.com/r/marcelstoer/open-data-smn](https://hub.docker.com/r/marcelstoer/open-data-smn) for the following architectures:
 
 - linux/amd64,
-- linux/arm/v7
 - linux/arm64
-
-The ARM images allow you to run this on e.g. Raspberry Pi.
 
 ## Contributing
 Please have a look at the [contributing guidelines](CONTRIBUTING.md) if you want to improve this project.
