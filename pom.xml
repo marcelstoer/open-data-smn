@@ -59,8 +59,15 @@
 
         <!-- plugins -->
         <compiler-plugin.version>3.10.1</compiler-plugin.version>
+        <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <gpg-plugin.version>3.0.1</gpg-plugin.version>
         <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+
+        <!-- Docker/Buildx -->
+        <buildx.builder.name>maven</buildx.builder.name>
+        <buildx.platforms>linux/amd64,linux/arm64</buildx.platforms>
+        <docker.file>src/main/docker/Dockerfile.jvm</docker.file>
+        <docker.image-name>marcelstoer/open-data-smn</docker.image-name>
 
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -311,6 +318,56 @@
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>${exec-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>build-and-push-docker-image</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>docker</executable>
+                                    <arguments>
+                                        <argument>buildx</argument>
+                                        <argument>build</argument>
+                                        <argument>--builder</argument>
+                                        <argument>${buildx.builder.name}</argument>
+                                        <argument>--platform</argument>
+                                        <argument>${buildx.platforms}</argument>
+                                        <argument>-f</argument>
+                                        <argument>${docker.file}</argument>
+                                        <argument>--tag</argument>
+                                        <argument>${docker.image-name}:${releaseVersion}</argument>
+                                        <argument>--push</argument>
+                                        <argument>.</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>copy-docker-image-to-latest</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>docker</executable>
+                                    <arguments>
+                                        <argument>run</argument>
+                                        <argument>--rm</argument>
+                                        <!-- TODO docker.io auth -->
+                                        <argument>quay.io/skopeo/stable:latest</argument>
+                                        <argument>copy</argument>
+                                        <argument>docker://${docker.image-name}:${releaseVersion}</argument>
+                                        <argument>docker://${docker.image-name}:latest</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
