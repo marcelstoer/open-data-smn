@@ -386,7 +386,7 @@
                                         <argument>run</argument>
                                         <argument>--rm</argument>
                                         <argument>-v</argument>
-                                        <argument>$HOME/.docker:/root/.docker</argument>
+                                        <argument>${user.home}/.docker:/root/.docker</argument>
                                         <argument>quay.io/skopeo/stable:latest</argument>
                                         <argument>copy</argument>
                                         <argument>docker://${docker.image-name}:${project.version}</argument>
