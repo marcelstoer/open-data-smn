@@ -9,6 +9,9 @@ quarkus:
         expire-after-write: 1M
   http:
     port: 8080
+    cors: true
+    cors.origins: "*"
+    cors.methods: "GET"
     header:
       '"Cache-Control"':
         value: "max-age=300"
