@@ -389,6 +389,8 @@
                                         <argument>${user.home}/.docker:/root/.docker</argument>
                                         <argument>quay.io/skopeo/stable:latest</argument>
                                         <argument>copy</argument>
+                                        <argument>--multi-arch</argument>
+                                        <argument>all</argument>
                                         <argument>docker://${docker.image-name}:${project.version}</argument>
                                         <argument>docker://${docker.image-name}:latest</argument>
                                     </arguments>
