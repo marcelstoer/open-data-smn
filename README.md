@@ -11,7 +11,7 @@ It's developed in the open supporting the [OpenData.ch](http://opendata.ch/) ini
 
 The actual data for 10min intervals is provided by [opendata.swiss](https://opendata.swiss/de/dataset/automatische-wetterstationen-aktuelle-messwerte), the Swiss open government data portal.
 
-v1.1+ supports [GeoJSON](http://en.wikipedia.org/wiki/GeoJSON) through `Accept` header content negotiation.
+v1.1+ supports [GeoJSON](http://en.wikipedia.org/wiki/GeoJSON).
 
 ## Getting started
 
