@@ -17,7 +17,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        cache: maven
+        cache: 'maven'
     - name: Maven build
       run: mvn -B verify -Dquarkus.container-image.build=true
     - name: SonarQube verification
