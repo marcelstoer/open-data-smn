@@ -1,6 +1,7 @@
 # OpenData SMN
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.frightanic/open-data-smn/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.frightanic/open-data-smn/)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/marcelstoer/open-data-smn?label=docker%20image)](https://hub.docker.com/r/marcelstoer/open-data-smn)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/marcelstoer/open-data-smn/blob/master/LICENSE)
 [![CI with Maven](https://github.com/marcelstoer/open-data-smn/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/marcelstoer/open-data-smn/actions/workflows/maven.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.frightanic%3Aopen-data-smn&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=com.frightanic%3Aopen-data-smn)
