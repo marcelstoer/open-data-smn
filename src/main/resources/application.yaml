@@ -3,17 +3,18 @@ quarkus:
     name: open-data-smn
   cache:
     caffeine:
-      '"smn"':
+      smn:
         expire-after-write: 5M
-      '"http"':
+      http:
         expire-after-write: 1M
   http:
     port: 8080
-    cors: true
-    cors.origins: "*"
-    cors.methods: "GET"
+    cors:
+      origins: "*"
+      methods: "GET"
+      enabled: true
     header:
-      '"Cache-Control"':
+      Cache-Control:
         value: "max-age=300"
   swagger-ui:
     always-include: true

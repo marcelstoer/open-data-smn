@@ -172,6 +172,7 @@ object StationMap {
         MAP["REH"] = Station("REH", "Zürich / Affoltern", 681432, 253548, 47.433333, 8.516667, 443)
         MAP["SMA"] = Station("SMA", "Zürich / Fluntern", 685116, 248065, 47.383333, 8.566667, 555)
         MAP["KLO"] = Station("KLO", "Zürich / Kloten", 682710, 259338, 47.483333, 8.533333, 426)
+        MAP["PFA"] = Station("PFA", "Pfäffikon, ZH", 1248165, 2699401, 47.376817, 8.754864, 537)
     }
 
     /**
