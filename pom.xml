@@ -52,17 +52,16 @@
 
     <properties>
         <!-- dependencies -->
-        <dokka.version>1.7.10</dokka.version>
-        <jacoco.version>0.8.8</jacoco.version>
-        <kotlin.version>1.7.10</kotlin.version>
-        <microprofile-openapi-api.version>3.0</microprofile-openapi-api.version>
-        <quarkus.version>2.12.1.Final</quarkus.version>
+        <dokka.version>2.1.0</dokka.version>
+        <jacoco.version>0.8.14</jacoco.version>
+        <kotlin.version>2.2.21</kotlin.version>
+        <quarkus.version>3.30.5</quarkus.version>
 
         <!-- plugins -->
-        <compiler-plugin.version>3.10.1</compiler-plugin.version>
+        <compiler-plugin.version>3.12.1</compiler-plugin.version>
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <gpg-plugin.version>3.0.1</gpg-plugin.version>
-        <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+        <surefire-plugin.version>3.2.3</surefire-plugin.version>
 
         <!-- Docker/Buildx -->
         <buildx.builder.name>maven</buildx.builder.name>
@@ -70,11 +69,13 @@
         <docker.file>src/main/docker/Dockerfile.jvm</docker.file>
         <docker.image-name>marcelstoer/open-data-smn</docker.image-name>
 
-        <java.version>11</java.version>
+        <java.version>17</java.version>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <skipITs>true</skipITs>
         <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.organization>marcelstoer-github</sonar.organization>
     </properties>
 
     <dependencyManagement>
@@ -116,11 +117,11 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
+            <artifactId>quarkus-rest-jackson</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-resteasy-reactive</artifactId>
+            <artifactId>quarkus-rest</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -129,7 +130,6 @@
         <dependency>
             <groupId>org.eclipse.microprofile.openapi</groupId>
             <artifactId>microprofile-openapi-api</artifactId>
-            <version>${microprofile-openapi-api.version}</version>
         </dependency>
 
         <!-- test -->
@@ -336,13 +336,13 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                            <waitUntil>published</waitUntil>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -410,7 +410,8 @@
             </activation>
             <properties>
                 <skipITs>false</skipITs>
-                <quarkus.package.type>native</quarkus.package.type>
+                <quarkus.native.enabled>true</quarkus.native.enabled>
+                <quarkus.package.jar.enabled>false</quarkus.package.jar.enabled>
             </properties>
         </profile>
     </profiles>

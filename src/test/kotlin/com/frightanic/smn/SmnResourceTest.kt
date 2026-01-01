@@ -5,7 +5,7 @@ import io.restassured.RestAssured.given
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
-import javax.ws.rs.core.HttpHeaders.CACHE_CONTROL
+import jakarta.ws.rs.core.HttpHeaders.CACHE_CONTROL
 
 @QuarkusTest
 internal class SmnResourceTest {

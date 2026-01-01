@@ -6,6 +6,6 @@ import java.net.URI
 
 @StaticInitSafe
 @ConfigMapping(prefix = "open-data-smn")
-interface ApplicationConfig {
+fun interface ApplicationConfig {
     fun dataUri(): URI
 }

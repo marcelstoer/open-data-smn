@@ -9,7 +9,7 @@ import io.quarkus.jackson.ObjectMapperCustomizer
 import io.quarkus.jackson.ObjectMapperCustomizer.MINIMUM_PRIORITY
 import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
-import javax.inject.Singleton
+import jakarta.inject.Singleton
 
 @Singleton
 class ObjectMapperCustomizer : ObjectMapperCustomizer {
