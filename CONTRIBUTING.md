@@ -1,14 +1,15 @@
 # Contributing Guide
-This project is built on top of [Dropwizard](http://dropwizard.io/). If you're unfamiliar with that I suggest you spend 30min to go through its excellent Getting Started tutorial. You will like what you see, I promise.
+This project is built with [Quarkus](https://quarkus.io) on Kotlin.
+If you're unfamiliar with that I suggest you spend 30min to go through its excellent Getting Started tutorial.
+You will like what you see, I promise.
 
-Of course you have to have an up-to-data JDK and Maven installed but if you've come this far I assume you already know that.
+You have to have JDK 17+ and Maven installed, but if you've come this far, I assume you already know that.
 
 ## Development environment setup
 - `git clone https://github.com/marcelstoer/open-data-smn.git`
 - `cd open-data-smn/`
-- `mvn package`
-- `java -jar target/open-data-smn-1.5.1-SNAPSHOT.jar server open-data-smn-dev.yml` <- adjust the version!
-- [http://localhost:4711/swagger](http://localhost:4711/swagger)
+- `mvn quarkus:dev`
+- [http://localhost:8080](http://localhost:8080)
 
 ## Commit messages
 
