@@ -75,10 +75,10 @@
 #   accessed directly. (example: "foo.example.com,bar.example.com")
 #
 ###
-FROM registry.access.redhat.com/ubi8/openjdk-11:1.11
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.23
 
 ENV LANGUAGE='en_US:en'
-
+ENV JAVA_OPTS="-XX:MaxRAMPercentage=75.0"
 
 # We make four distinct layers so if there are application changes the library layers can be re-used
 COPY --chown=185  --chmod=755 target/quarkus-app/lib/ /deployments/lib/
@@ -91,4 +91,3 @@ USER 185
 ENV AB_JOLOKIA_OFF=""
 ENV JAVA_OPTS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
 ENV JAVA_APP_JAR="/deployments/quarkus-run.jar"
-

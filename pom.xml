@@ -386,9 +386,11 @@
                                         <argument>run</argument>
                                         <argument>--rm</argument>
                                         <argument>-v</argument>
-                                        <argument>${user.home}/.docker:/root/.docker</argument>
+                                        <argument>${user.home}/.docker/skopeo-auth.json:/root/.docker/config.json</argument>
                                         <argument>quay.io/skopeo/stable:latest</argument>
                                         <argument>copy</argument>
+                                        <argument>--authfile</argument>
+                                        <argument>/root/.docker/config.json</argument>
                                         <argument>--multi-arch</argument>
                                         <argument>all</argument>
                                         <argument>docker://${docker.image-name}:${project.version}</argument>
@@ -400,19 +402,6 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
-        <profile>
-            <id>native</id>
-            <activation>
-                <property>
-                    <name>native</name>
-                </property>
-            </activation>
-            <properties>
-                <skipITs>false</skipITs>
-                <quarkus.native.enabled>true</quarkus.native.enabled>
-                <quarkus.package.jar.enabled>false</quarkus.package.jar.enabled>
-            </properties>
         </profile>
     </profiles>
 </project>
