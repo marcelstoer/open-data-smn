@@ -74,7 +74,7 @@ class SmnResource(val geoAdmin: GeoAdmin) {
             schema = Schema (type = STRING, enumeration = ["CH1903", "WGS84"], defaultValue = "WGS84")
         )
         @QueryParam("projection") projection: String?
-    ): FeatureCollection? {
+    ): FeatureCollection {
         val crsType: CrsType = if (projection.isNullOrEmpty()) CrsType.WGS84 else CrsType.valueOf(projection)
         return FeatureCollection(crsType, geoAdmin.getSmnData().getAllRecords())
     }
